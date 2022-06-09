@@ -13,5 +13,5 @@ RUN ldd /repo/src/linux/zforth | tr -s '[:blank:]' '\n' | grep '^/' | xargs -I %
 FROM ubuntu:20.04 as package
 
 COPY --from=builder /deps /deps
-COPY --from=builder /repo/src/linux/zforth /repo/src/linux/zforth
+COPY --from=builder /repo /repo
 ENV LD_LIBRARY_PATH=/deps
