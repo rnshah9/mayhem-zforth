@@ -3,3 +3,5 @@ target: zforth
 
 cmds:
   - cmd: /repo/src/linux/zforth /repo/forth/core.zf
+    env:
+      DISABLE_SMOKETEST: '1'
